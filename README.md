@@ -15,9 +15,11 @@ $ cd ~/catkin_ws/src
 # 下载源码
 $ git clone https://github.com/withhold17/TeachingCar.git
 
-# 安装依赖及编译
-$ cd ..
-$ rosdep install --from-paths src --ignore-src -y
+# 安装sdk需要的依赖
+$ apt-get install libudev-dev
+
+# 编译
+$ cd ~/catkin_ws
 $ catkin_make -DCATKIN_WHITELIST_PACKAGES="ld06_lidar"
 ```
 
